@@ -1,11 +1,12 @@
 function menuClick() {
+    let menu = document.querySelector('nav ul')
+    let nav = document.querySelector('nav')
 
-    if (document.querySelector('nav ul').style.display == 'none') {
-        document.querySelector('nav ul').style.display = 'flex'
+    if (menu.style.display == 'flex') {
+        menu.style.display = 'none'
+        nav.style.borderColor = '#4AAFF7'
     } else {
-        document.querySelector('nav ul').style.display = 'none'
+        menu.style.display = 'flex'
+        nav.style.borderColor = 'transparent'
     }
-    
 }
-
-

@@ -7,12 +7,18 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+    background-color: #4AAFF7;
+}
+
+/*#121619 #4AAFF7 #587792 #1B1D3B*/
+
 /*Cabeçalho*/
 #cabecalho {
     height: 600px;
     margin: auto;
     margin-top: -40px;
-    background-image: url('../img/img1.jpg');
+    background-color: #FBFBFB;
     background-position: center;
     background-size: cover;
     transform: skewY(-3deg);
@@ -22,14 +28,13 @@
 #cabecalho-header {
     width: 100%;
     height: 100%;
-    background-color: rgba( 0, 0, 0, 0.8);
     overflow: hidden;
 }
 
 header {
     display: flex;
     justify-content: flex-end;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    border-bottom: 1px solid #4AAFF7;
     height: 80px;
     transform: skewY(3deg);
     margin-top: 40px;
@@ -54,7 +59,7 @@ nav {
 .menu-line {
     height: 2px;
     width: 100%;
-    background-color: #FFFFFF;
+    background-color: #4AAFF7;
 }
 
 nav ul {
@@ -62,22 +67,29 @@ nav ul {
 }
 
 nav li {
+    display: flex;
+    align-items: center;
     list-style: none;
+    height: 80px;
 }
 
 nav li a {
+    display: flex;
+    align-items: center;
     text-decoration: none;
-    color: rgba(255, 255, 255, 0.75);
+    color: #4AAFF7;
     font-size: 1rem;
     margin: 0px 5px;
-    padding: 5px;
+    padding: 0px 10px 0px 10px;
+    height: 80px;
     text-transform: uppercase;
     font-weight: bold;
     transition: all 0.4s;
 }
 
-nav li a:hover {
-    background-color: rgba(255, 255, 255, 0.25);
+nav li:hover a {
+    color: #1B1D3B;
+    border-bottom: 1px solid #1B1D3B;
 }
 
 #cabecalho-content {
@@ -93,25 +105,90 @@ nav li a:hover {
 #cabecalho-content h1 {
     font-size: 3rem;
     margin-bottom: 10px;
-    color: #FFFFFF;
+    color: #4AAFF7;
 }
 
 #cabecalho-content p {
     font-size: 2rem;
+    color: #1B1D3B;
+}
+
+/*Seção sobre*/
+#section-about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    margin-top: 100px;
+    background-color: #4AAFF7;
+}
+
+#section-about div {
+    height: 400px;
+    width: 500px;
     color: #FFFFFF;
+    padding: 0px 20px 0px 20px;
+    text-align: justify;
+}
+
+#section-about div:first-child {
+    border-right: 1px solid #1B1D3B;
+}
+
+#section-about div h2 {
+    font-size: 2rem;
+}
+
+#section-about div p {
+    font-size: 1.4em;
+}
+
+/*Seção Formação*/
+#section-formation {
+    background-color: #1B1D3B;
+    height: 600px;
+}
+
+@media (max-width: 800px) {
+    #section-about {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    #section-about div {
+        width: 100%;
+        padding: 0px 10px 0px 10px;
+    }
+    
+    #section-about div:first-child {
+        height: 100px;
+        border-right: none;
+        text-align: center;
+    }
+
+    #section-about div:first-child h2 {
+        border-bottom: 2px solid #1B1D3B;
+        padding-bottom: 60px;
+    }
 }
 
 @media (max-width: 600px) {
+    header {
+        height: 60px;
+    }
+
     nav {
-        width: 80px;
+        width: 60px;
+        height: 60px;
         justify-content: center;
-        border-left: 1px solid rgba(255, 255, 255, 0.25);
+        border-left: 1px solid #4AAFF7;
+        transition: all 0.6s;
     }
 
     #menuMobile {
         display: flex;
     }
-
+    
     nav ul {
         display: none;
         flex-direction: column;
@@ -120,15 +197,16 @@ nav li a:hover {
         position: absolute;
         width: 100%;
         height: 160px;
-        background-color: rgba(255, 255, 255, 0.75);
-        top: 80px;
+        background-color: #1B1D3B;
+        top: 60px;
         right: 0px;
     }
 
     nav li a {
-        color: #000000;
+        color: #FBFBFB;
         margin: 0px 0px;
         padding: 5px;
+        height: 0px;
     }
 
     #cabecalho-content {
@@ -141,6 +219,15 @@ nav li a:hover {
     
     #cabecalho-content p {
         font-size: 1.4rem;
+    }
+
+    #section-about div:first-child h2 {
+        padding-bottom: 30px;
+    }
+
+    #section-about div:last-child {
+        margin-top: 20px;
+        height: 600px;
     }
 }
 
