@@ -144,9 +144,37 @@ nav li:hover a {
 }
 
 /*Seção Formação*/
-#section-formation {
+#section-tec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #1B1D3B;
     height: 600px;
+}
+
+#section-tec h2 {
+    color: #FFFFFF;
+    font-size: 2rem;
+    margin: 60px 0px 80px 0px;
+}
+
+#section-tec__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+}
+
+#section-tec__container div:first-child {
+    padding: 20px;
+    background-color: #4AAFF7;
+    align-self: flex-start;
+}
+
+#section-tec__container div:last-child {
+    padding: 20px;
+    background-color: #4AAFF7;
+    align-self: flex-end;
 }
 
 @media (max-width: 800px) {
